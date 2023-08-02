@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #406E8E;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 1s;
+  }
+
+  .sun {
+    width: 100px;
+    height: 100px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 0 10px 10px #FFD700;
+    transition: background-color 1s, transform 10s;
+  }
+
+  .moon {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 0 10px 10px #fff;
+    opacity: 0;
+    transition: opacity 1s, transform 10s;
+  }
+
+  .cloud {
+    width: 150px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50% 50% 50px 50px;
+    position: absolute;
+    top: 50px;
+    animation: moveClouds 15s linear infinite;
+    transition: opacity 1s;
+  }
+
+  .cloud:nth-child(1) {
+    top: 100px;
+    left: 20%;
+    animation-delay: 2s;
+  }
+
+  .cloud:nth-child(2) {
+    top: 150px;
+    left: 50%;
+    animation-delay: 4s;
+  }
+
+  .cloud:nth-child(3) {
+    top: 200px;
+    left: 10%;
+    animation-delay: 1s;
+  }
+
+  .cloud:nth-child(4) {
+    top: 250px;
+    left: 70%;
+    animation-delay: 3s;
+  }
+
+  @keyframes moveClouds {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .star {
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    animation: twinkleStars 1s linear infinite;
+    opacity: 0;
+  }
+
+  /* Tambahkan bintang-bintang */
+  .star:nth-child(1) {
+    top: 100px;
+    left: 200px;
+  }
+
+  .star:nth-child(2) {
+    top: 150px;
+    left: 400px;
+  }
+
+  .star:nth-child(3) {
+    top: 50px;
+    left: 300px;
+  }
+
+  .star:nth-child(4) {
+    top: 250px;
+    left: 100px;
+  }
+
+  .star:nth-child(5) {
+    top: 300px;
+    left: 250px;
+  }
+
+  .star:nth-child(6) {
+    top: 200px;
+    left: 450px;
+  }
+
+  .star:nth-child(7) {
+    top: 80px;
+    left: 500px;
+  }
+
+  .star:nth-child(8) {
+    top: 180px;
+    left: 600px;
+  }
+
+  .star:nth-child(9) {
+    top: 300px;
+    left: 700px;
+  }
+
+  .star:nth-child(10) {
+    top: 100px;
+    left: 800px;
+  }
+
+  /* Tambahkan bintang-bintang lainnya */
+  .star:nth-child(11) {
+    top: 350px;
+    left: 150px;
+  }
+
+  .star:nth-child(12) {
+    top: 200px;
+    left: 300px;
+  }
+
+  .star:nth-child(13) {
+    top: 100px;
+    left: 500px;
+  }
+
+  .star:nth-child(14) {
+    top: 50px;
+    left: 650px;
+  }
+
+  .star:nth-child(15) {
+    top: 180px;
+    left: 750px;
+  }
+
+  @keyframes twinkleStars {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .typewriter-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    animation: typewriter 20s steps(40) 1s forwards, showText 1s 6s forwards, typewriterLoop 20s steps(40) infinite 12s;
+    opacity: 0;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 59%;
+    }
+  }
+
+  @keyframes showText {
+    to {
+      opacity: 1;
+    }
+  }
+
+ @keyframes typewriterLoop {
+0% {
+  width: 0;
+}
+25% {
+  width: 59%;
+}
+75% {
+  width: 59%;
+}
+100% {
+  width: 0;
+}
+}
